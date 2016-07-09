@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>ОWТ. Калькулятор</title>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+      <link rel="shortcut icon" href="webLogo.png" type="image/png" /><!-- В EI иконка почему-то не работает. Будет время, разобраться, почему. -->
+      <link rel="stylesheet" href="style.css" />
+      <script src="jquery-2.2.4.js"></script>
+   </head>
+   <body>
+      <div class="header">
+         <header>
+            <img src="webLogo.png" alt="Логотип" height="100" />
+            <h1>Основы Web-технологий</h1>
+            <ul class="menu">
+               <li><a href="IW_HTML5_1of7_Index.html">Главная</a></li>
+               <li><a href="IW_HTML5_2of7_WebTech.html">Web-технологии</a>
+                  <ul class="hideMenu">
+                     <li><a href="IW_HTML5_3of7_HTML5.html">HTML5</a></li>
+                     <li><a href="IW_HTML5_4of7_CSS3.html">CSS3</a></li>
+                     <li><a href="IW_HTML5_5of7_JS.html">JavaScript</a></li>
+                  </ul>
+               </li>
+               <li><a href="IW_HTML5_6of7_Calc.html">Калькулятор</a></li>
+               <li><a href="IW_HTML5_7of7_Test.html">Тест</a></li>
+            </ul>
+         </header>
+      </div>
+      <div>
+         <form id="calc" name="calcul" target="result"><!-- action="#" атрибут формы action нам не нужен, так как данные никуда не будут отправлятся, их будет js обрабатывать. --> 
+            <table border="1">
+               <tr>
+                  <td colspan="5" class="rezult">
+                     <!-- Комментарий МХ: <output form="calc" name="result" for="#"> - вместо этого элемента вставь Input type="text". Максим Худолей: если ты сделаешь <output> то ты потеряешь возможность с клавиатуры писать числа, но, если ты считаешь что такое надо отключить, то тут я с тобой полностью согласен, <output> тогда верно. Я: Нет, согласен с тобой, кто то может захотеть числа и с клавы вводить. <output> получается, просто отображает значения, которые клацаем мышкой по кнопками на странице и выводит результат. Максим Худолей: но есть еще одна проблема: <output> не все браузеры понимают, т.е. не везде калькулятор будет работать, потому беда. -->
+                     <input id="result" type="text" name="result" autofocus maxlength="31">
+                     <!-- <output form="calc" name="result" for="#"><br /> <br /> вставлен только для того, чтобы поле ввода/вывода значений имело красивый вид, как в задании. Без него это поле некрасиво сплющивается в полоску. </output> -->
+                  </td>
+               </tr>
+               <tr>
+                  <td><button id="btnSeven" name="btnSeven" type="button" form="calc" value="7">7</button></td>
+                  <td><button id="btnEight" name="btnEight" type="button" form="calc" value="8">8</button></td>
+                  <td><button id="btnNine" name="btnNine" type="button" form="calc" value="9">9</button></td>
+                  <td><button id="btnDivide" name="btnDivide" type="button" form="calc">/</button></td>
+                  <td><button id="btnReset" name="btnReset" type="reset" form="calc">C</button></td>
+               </tr>
+               <tr>
+                  <td><button id="btnFour" name="btnFour" type="button" form="calc" value="4">4</button></td>
+                  <td><button id="btnFive" name="btnFive" type="button" form="calc" value="5">5</button></td>
+                  <td><button id="btnSix" name="btnSix" type="button" form="calc" value="6">6</button></td>
+                  <td><button id="btnMultiply" name="btnMultiply" type="button" form="calc">*</button></td>
+                  <td><button id="btnPlsMin" name="btnPlsMin" type="button" form="calc">&plusmn;</button></td>
+               </tr>
+               <tr>
+                  <td><button id="btnOne" name="btnOne" type="button" form="calc" value="1">1</button></td>
+                  <td><button id="btnTwo" name="btnTwo" type="button" form="calc" value="2">2</button></td>
+                  <td><button id="btnThree" name="btnThree" type="button" form="calc" value="3">3</button></td>
+                  <td><button id="btnMin" name="btnMin" type="button" form="calc">-</button></td>
+                  <td rowspan="2"><button id="btnEquals" name="btnEquals"type="button" form="calc">=</button></td>
+               </tr>
+               <tr>
+                  <td colspan="2"><button id="btnZero" name="btnZero" type="button" form="calc" value="0">0</button></td>
+                  <td><button id="btnPoint" name="btnPoint" type="button" form="calc">.</button></td>
+                  <td><button id="btnPlus" name="btnPlus" type="button" form="calc">+</button></td>
+               </tr>
+            </table>
+         </form>
+      </div>
+      <div class="footer">
+         <footer>
+            <address>
+               <a href="mailto:savitskiyvv80@gmail.com">Пишите: savitskiyvv80@gmail.com</a>
+            </address>
+            &copy; Савицкий Виталий Валерьевич, 2016 год.
+         </footer>
+      </div>
+      <script src="jQCalc.js"></script>
+   </body>
+</html>

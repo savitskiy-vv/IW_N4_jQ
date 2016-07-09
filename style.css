@@ -1,0 +1,190 @@
+* { /* Сброс всего необходимого */
+   vertical-align: baseline;
+   font-weight: inherit;
+   font-family: inherit;
+   font-style: inherit;
+   font-size: 100%;
+   border: 0 none;
+   outline: 0;
+   padding: 0;
+   margin: 0;
+}
+html {
+   display: block;
+   background: gray;
+   height: 100%;
+}
+body {
+   display: block; /* display: block; Элемент показывается как блочный. Применение этого значения для строчных элементов, например <span>, заставляет его вести подобно блокам — происходит перенос строк в начале и в конце содержимого. */
+   width: 800px; /* Ширина боди */
+   margin: 0 auto;
+   /* color: white; Скорее всего по умолчанию, можно не указывать */
+   /* height: 200px; Высота блока */
+   /* min-width: 400px; /* Минимальная ширина body */
+   font-family: Arial;
+   text-align: justify; /* Текст по ширине */
+}
+
+div {
+   display: block;
+   background: white;
+   padding: 5px 5px; /* Отступ от текста 5 - сверху и снизу, 5px - слева и справа */
+   border-radius: 9px;
+}
+
+.header, .footer {
+   font-family: Times New Roman;
+}
+
+.footer {
+   text-align: center;
+   padding: 4px 0 4px 0;
+}
+
+
+img {
+   float: left;
+}
+
+h1 {
+   float: left;
+   display: block;
+   font-weight: bold;
+   font-size: 200%; /* Размер шрифта в процентах */ 
+   margin: 30px 15px 20px 15px;
+}
+
+h2 {
+   font-weight: bold;
+   font-size: 150%; /* Размер шрифта в процентах */ 
+      padding: 0 0 8px 0;
+}
+
+h3 {
+   font-weight: bold;
+   font-size: 120%; /* Размер шрифта в процентах */ 
+   padding: 8px 0;
+}
+
+h4 {
+   font-weight: bold;
+   font-size: 100%; /* Размер шрифта в процентах */ 
+   padding: 8px 0;
+}
+address, i, em, dfn {
+   font-style: italic;
+}
+b, strong {
+   font-weight: bolder;
+}
+
+/* Блок менюшки НАЧАЛО */
+.menu, .hideMenu {
+   list-style-type: none;
+}
+.menu{
+   /* margin: 0 30%; */
+   clear: both; /* Запрещает обтекание элемента */
+   /* position: relative; */
+   text-align: center;
+}
+.menu li{
+   display: inline-block;
+   position: relative;
+}
+.hideMenu li {
+   display: block;
+}
+.hideMenu {
+   display: none;
+   position: absolute;
+   top: 95%;
+   left: 17px; 
+   background: white;
+   border: 1px solid black;
+   border-radius: 5px;
+   padding: 5px;
+   text-align: left;
+}
+.menu li:hover .hideMenu {
+   display: block;
+}
+/* Блок менюшки КОНЕЦ */
+
+/* Отступы для черных точек-списков на стр. 2 "Основы Web-технологий" НАЧАЛО */
+.indent ul{
+   padding: 0 0 0 40px;;
+}
+.indent dd{
+   padding: 0 0 0 40px;;
+}
+/* Отступы для черных точек-списков на стр. 2 "Основы Web-технологий" КОНЕЦ */
+
+/* Оформление стр. 3 "HTML5" НАЧАЛО */
+.aside {
+   font-family: Times New Roman;
+   display: block;
+   background: silver;
+   float: right;
+   max-width: 195px;
+   margin: 5px;
+}
+.aside p{
+   font-size: small;
+}
+.padding0 {
+   padding: 0;
+}
+code {
+   font-family: monospace;
+}
+/* Оформление стр. 3 "HTML5" КОНЕЦ */
+
+/* Оформление стр. 6 "Калькулятор" НАЧАЛО */
+table {
+   width: 300px; /* Ширина таблицы */
+   margin: auto; /* Выравниваем таблицу по центру окна  */
+   border-spacing: 2px 5px; /* Расстояние между ячейками */
+}
+td {
+   vertical-align: middle;
+   text-align: center; 
+   border: 1px solid rgba(0,0,0,.2);
+   border-radius: 2px;
+   background: rgb(245,245,245) linear-gradient(#f4f4f4, #f1f1f1);
+   height: 28px;
+}
+button {
+   background: rgb(245,245,245) linear-gradient(#f4f4f4, #f1f1f1);
+   padding: 5px 7px 3px 7px;
+   width: 100%;
+}
+#btnEquals {
+   height: 100%;
+}
+.rezult {
+   background: white;
+   padding: 2px 6px 0 6px;
+}
+#result {
+   width: 100%;
+   height: 100%;
+   font-size: 20px;
+   font-weight: bold;
+   text-align: right;
+}
+/* Оформление стр. 6 "Калькулятор" КОНЕЦ */
+
+/* Оформление стр. 7 "Тест" НАЧАЛО */
+#test input {
+   margin: 0 3px;
+}
+.bottonTest {
+   border: 1px solid rgba(0,0,0,.2);
+   border-radius: 2px;
+   background: rgb(245,245,245) linear-gradient(#f4f4f4, #f1f1f1);
+   font-size: 84%;
+   padding: 2px 6px;
+   width: auto;
+}
+/* Оформление стр. 7 "Тест" КОНЕЦ */
